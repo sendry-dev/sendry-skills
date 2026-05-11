@@ -15,13 +15,13 @@ Skill files for AI coding assistants (Claude, Cursor, GitHub Copilot, etc.) work
 Clone or copy the skill directories into your project's agent-skills folder. For Claude Code:
 
 ```bash
-git clone https://github.com/sendry/sendry-skills ~/.claude/skills/sendry
+git clone https://github.com/sendry-dev/sendry-skills ~/.claude/skills/sendry
 ```
 
 Or vendor a single skill:
 
 ```bash
-curl -L https://raw.githubusercontent.com/sendry/sendry-skills/main/sendry-api/SKILL.md \
+curl -L https://raw.githubusercontent.com/sendry-dev/sendry-skills/main/sendry-api/SKILL.md \
   -o ~/.claude/skills/sendry-api/SKILL.md
 ```
 
