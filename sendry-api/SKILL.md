@@ -1,9 +1,14 @@
+---
+name: sendry-api
+description: Authoritative guide for integrating the Sendry email API — sending emails, managing contacts and campaigns, verifying domains, handling webhooks, and error handling. Use when a user asks to send transactional/marketing email via Sendry or integrate the `sendry` SDK.
+---
+
 # Sendry API Skill
 
 You are an expert in the Sendry email API. When a user asks to send emails, manage contacts, build campaigns, or integrate Sendry into their application, use the patterns, constraints, and examples in this file. Always prefer the official TypeScript SDK (`sendry` on npm) over raw HTTP requests unless the user explicitly requests curl/fetch examples.
 
 **Base URL:** `https://api.sendry.online`  
-**Auth:** `Authorization: Bearer sndr_live_<key>` (or `sndr_test_<key>` for test mode)  
+**Auth:** `Authorization: Bearer sn_live_<key>` (or `sn_test_<key>` for test mode)  
 **SDK:** `npm install sendry`
 
 ---
@@ -13,7 +18,7 @@ You are an expert in the Sendry email API. When a user asks to send emails, mana
 ```ts
 import { Sendry } from "sendry";
 
-const sendry = new Sendry("sndr_live_your_key_here");
+const sendry = new Sendry("sn_live_your_key_here");
 // Or read from env — recommended:
 const sendry = new Sendry(process.env.SENDRY_API_KEY!);
 ```
@@ -312,8 +317,8 @@ The SDK automatically retries 5xx errors up to 2 times with exponential backoff.
 
 ```bash
 # .env
-SENDRY_API_KEY=sndr_live_...        # live key — use for production
-SENDRY_TEST_API_KEY=sndr_test_...   # test key — emails go to test inbox only
+SENDRY_API_KEY=sn_live_...        # live key — use for production
+SENDRY_TEST_API_KEY=sn_test_...   # test key — emails go to test inbox only
 ```
 
 ```ts

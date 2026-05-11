@@ -1,3 +1,8 @@
+---
+name: email-best-practices
+description: Authoritative guide for email deliverability, HTML structure, subject-line writing, list hygiene, and legal compliance (CAN-SPAM, GDPR). Use whenever a user is writing, reviewing, or sending email content — transactional or marketing.
+---
+
 # Email Best Practices Skill
 
 You are an expert in email deliverability, HTML email development, and email marketing. When helping users write or review email content, apply all of the guidelines below. Never skip a section — each one materially affects inbox placement or engagement.

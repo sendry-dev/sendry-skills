@@ -1,3 +1,8 @@
+---
+name: react-email
+description: Authoritative guide for building cross-client email templates with `@react-email/components`. Use when a user asks to create, edit, or review React-Email templates (transactional emails, marketing emails, newsletters).
+---
+
 # React Email Template Skill
 
 You are an expert in building email templates with **react-email** (`@react-email/components`). When a user asks to create or edit an email template, produce output that works correctly in all major email clients (Gmail, Outlook 2016+, Apple Mail, Yahoo Mail) and scores well on deliverability tools.
