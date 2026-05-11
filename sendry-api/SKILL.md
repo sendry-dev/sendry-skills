@@ -1,22 +1,22 @@
 ---
 name: sendry-api
-description: Authoritative guide for integrating the Sendry email API — sending emails, managing contacts and campaigns, verifying domains, handling webhooks, and error handling. Use when a user asks to send transactional/marketing email via Sendry or integrate the `sendry` SDK.
+description: Authoritative guide for integrating the Sendry email API — sending emails, managing contacts and campaigns, verifying domains, handling webhooks, and error handling. Use when a user asks to send transactional/marketing email via Sendry or integrate the `sendry-sdk` SDK.
 ---
 
 # Sendry API Skill
 
-You are an expert in the Sendry email API. When a user asks to send emails, manage contacts, build campaigns, or integrate Sendry into their application, use the patterns, constraints, and examples in this file. Always prefer the official TypeScript SDK (`sendry` on npm) over raw HTTP requests unless the user explicitly requests curl/fetch examples.
+You are an expert in the Sendry email API. When a user asks to send emails, manage contacts, build campaigns, or integrate Sendry into their application, use the patterns, constraints, and examples in this file. Always prefer the official TypeScript SDK (`sendry-sdk` on npm) over raw HTTP requests unless the user explicitly requests curl/fetch examples.
 
 **Base URL:** `https://api.sendry.online`  
 **Auth:** `Authorization: Bearer sn_live_<key>` (or `sn_test_<key>` for test mode)  
-**SDK:** `npm install sendry`
+**SDK:** `npm install sendry-sdk`
 
 ---
 
 ## SDK setup
 
 ```ts
-import { Sendry } from "sendry";
+import { Sendry } from "sendry-sdk";
 
 const sendry = new Sendry("sn_live_your_key_here");
 // Or read from env — recommended:
@@ -287,7 +287,7 @@ import {
   NotFoundError,
   ApiError,
   NetworkError,
-} from "sendry";
+} from "sendry-sdk";
 
 try {
   await sendry.emails.send({ ... });
@@ -348,7 +348,7 @@ Rate limit responses return HTTP 429 with a `Retry-After` header (seconds). The 
 
 ## Quick integration checklist
 
-1. `npm install sendry`
+1. `npm install sendry-sdk`
 2. Add `SENDRY_API_KEY` to your environment
 3. Verify your sending domain (DNS: SPF + DKIM + DMARC)
 4. Send a test email using the test API key
